@@ -1,0 +1,10 @@
+%html
+  %head
+    = css :application
+    = js :application
+    %title
+      Часы G-SHOCK за 1 270 рублей
+  %body
+    = yield
+    -#= haml :modal
+    = erb :metrika

@@ -1,0 +1,83 @@
+= haml :modal
+#intro
+  .wrapper
+    .topbar.clearfix
+      .logo
+        %img{src: '/images/logo.jpg'}
+
+      .phone
+        8 800 2000 600
+        %br
+        %a.show-form-button{href: '#'} Заказать звонок
+
+    .content
+      .image
+      .text
+        .title
+          Продажа часов Casio G-Shock 
+          с доставкой по всей РФ
+        .mini
+          При покупке любой 
+          модели часов, каучуковый
+          браслет - в подарок!
+
+        .price
+          от 1 270 рублей
+
+%section.striped
+  .wrapper
+    .title
+      Проверим на прочность наши часы?
+
+    .video-block
+      Тут будет видео
+
+
+
+
+%section
+  .wrapper
+    .title
+      Каталог G-Shock
+      - e = Dir.entries('assets/images/items').map { |e| e}
+
+    .catalog.clearfix
+      - e.each do |item|
+        - next if item.length < 10
+        = haml :item, locals: {img: item}
+
+%section.striped
+  .wrapper
+    .title
+      Как получить часы, если вы в другом городе?
+
+    .features.clearfix
+      .feature
+        .number 1
+        %br
+        Вы оставляете заявку на сайте
+
+      .feature
+        .number 4
+        После отправки товара мы оповещаем вас 
+        по телефону/почте об отправке часов
+
+      .feature
+        .number 2
+        По заявке перезванивает менеджер
+        и уточняет необходимую для оформления
+        заказа информацию.
+
+      .feature
+        .number 5
+        В течение 5-15 дней товар доходит до вас и вы получаете оповещение с какого
+        отделения почты вы можете забрать заказ
+
+      .feature
+        .number 3
+        Без предоплаты вам отправляется
+        товар почтой первого класса
+
+      .feature
+        .number 6
+        На почте, при получении часов, вы по факту оплачиваете заказ

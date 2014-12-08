@@ -1,0 +1,197 @@
+@font-face
+  font-family: 'HelveticaNeue-Light'
+  src: url('/fonts/HelveticaNeueCyr-Light.otf') format("opentype")
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'HelveticaNeue-Regular'
+  src: url('/fonts/HelveticaNeueCyr-Roman.otf') format("opentype")
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'HelveticaNeue-Thin'
+  src: url('/fonts/HelveticaNeueCyr-Thin.otf') format("opentype")
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'HelveticaNeue-UltraLight'
+  src: url('/fonts/HelveticaNeueCyr-UltraLight.otf') format("opentype")
+  font-weight: normal
+  font-style: normal
+
+body
+  padding: 0px
+  margin: 0px
+  font-family: 'HelveticaNeue-Light', 'Helvetica', 'Arial', sans-serif
+  min-width: 1150px
+  color: #fff
+  background: #000
+
+.wrapper
+  width: 940px
+  margin: 0px auto
+
+.clearfix
+  &:after
+    clear: both
+    content: "."
+    display: block
+    height: 0
+    clear: both
+    visibility: hidden
+
+.relative
+  position: relative
+
+.inheritance-height
+  height: 100%
+
+
+a
+  color: blue
+
+
+section
+  padding: 75px 0
+
+  &.striped
+    background: #0D0D0D
+
+  .title
+    height: 50px
+    line-height: 50px
+    font-size: 32px
+    font-family: "HelveticaNeue-Light"
+    margin-bottom: 50px
+    color: #fff
+    text-align: center
+
+    &.small
+      font-size: 24px
+      line-height: 30px
+
+    &.min-margin-bottom
+      margin-bottom: 25px
+
+  .subtitle
+    font-size: 18px
+    line-height: 24px
+    color: #4F5254
+    text-align: center
+
+
+strong
+  font-family: 'HelveticaNeue-Regular'
+
+
+//@import url(http://fonts.googleapis.com/css?family=PT+Sans&subset=latin,cyrillic)
+.price-rouble:after
+  font-family: "PT Sans"
+  content: " \20B7"
+
+.catalog
+  .item
+    float: left
+    width: 220px
+    margin-right: 20px
+    margin-bottom: 40px
+    position: relative
+    cursor: pointer
+
+    &:hover
+      .item-overlay
+        display: inline
+
+    &:nth-child(4n)
+      margin-right: 0px
+
+    .item-overlay
+      display: none
+      position: absolute
+      top: 0px
+      left: 0px
+      width: 220px
+      height: 224px
+      cursor: pointer
+
+      background: rgba(0,0,0,0.85)
+
+      .button
+        margin: 0px auto
+        margin-top: 80px
+        width: 200px
+        height: 60px
+        border: 1px solid #D34A44
+        line-height: 61px
+        text-align: center
+        font-size: 18px
+        color: #D34A44
+        cursor: pointer
+
+        &:hover
+          background: #D34A44
+          color: #fff
+
+    img
+      width: 220px
+      //height: 280px
+      margin-bottom: 25px
+
+    .name
+      font-size: 24px
+      text-align: center
+
+    .price
+      padding-top: 10px
+      font-size: 24px
+      text-align: center
+      color: #D34A44
+      font-family: 'HelveticaNeue-Light'
+
+      span
+        font-size: 16px
+
+
+.video-block
+  width: 940px
+  height: 480px
+  background: #666
+  color: #fff
+  text-align: center
+  line-height: 480px
+  font-size: 32px
+
+.features
+
+  .feature
+    float: left
+    width: 340px
+    height: 85px
+    //background: red
+    margin-bottom: 40px
+    margin-right: 40px
+    font-size: 18px
+    line-height: 1.3
+    position: relative
+    padding-left: 100px
+
+    &:nth-child(2n)
+      margin-right: 0px
+
+    .number
+      position: absolute
+      top: 0px
+      left: 0px
+      width: 75px
+      height: 75px
+      border: 1px solid #D34A44
+      border-radius: 100px
+      text-align: center
+      line-height: 75px
+      color: #D34A44
+      font-size: 32px
+
+    
